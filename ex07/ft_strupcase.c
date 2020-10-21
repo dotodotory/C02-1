@@ -6,7 +6,7 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 01:17:04 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/21 01:23:47 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/21 18:15:52 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strupcase(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] += 'A' - 'a';
+			str[i] -= 'a' - 'A';
 		i++;
 	}
-	return (*str);
+	return (str);
 }

@@ -6,11 +6,9 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 17:49:11 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/18 19:59:16 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/21 11:53:35 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -23,5 +21,5 @@ char	*ft_strcpy(char *dest, char *src)
 		index++;
 	}
 	dest[index] = '\0';
-	return (*dest);
+	return (dest);
 }
