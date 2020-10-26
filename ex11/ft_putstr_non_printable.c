@@ -6,31 +6,33 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 20:10:38 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/26 00:54:28 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/26 10:33:31 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_hexa(char d)
+void	ft_hexa(char d)
 {
 	char hexa[3];
-	char h[16] = "123456789abcdef";
 
 	hexa[0] = '\\';
-	hexa[1] = h[d / 16];
-	hexa[2] = h[d % 16];
-	return (hexa);
+	hexa[1] = "0123456789abcdef"[d / 16];
+	hexa[2] = "0123456789abcdef"[d % 16];
+	write(1, hexa, 3);
 }
 
-void	ft_putstr_non_printable(char *str);
+void	ft_putstr_non_printable(char *str)
 {
+	int i;
+
+	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 || str[i] > 127)
-			write(1, ft_hexa(str[i]), 3);
+		if (str[i] < 32 || str[i] > 126)
+			ft_hexa(str[i]);
 		else
-			write(1, str[i], 1);
+			write(1, &str[i], 1);
 		i++;
 	}
 }

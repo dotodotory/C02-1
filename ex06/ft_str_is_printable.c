@@ -6,7 +6,7 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 01:14:04 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/21 15:38:20 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/26 10:34:46 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int		ft_str_is_printable(char *str)
 	int i;
 
 	i = 0;
-	while (str[i] >= 32 && str[i] <= 127)
+	while (str[i] > 31 && str[i] < 127)
 		i++;
 	if (str[i] == '\0')
 		return (1);
