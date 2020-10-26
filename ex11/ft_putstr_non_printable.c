@@ -6,15 +6,15 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 20:10:38 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/26 10:33:31 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/26 21:16:08 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_hexa(char d)
+void	ft_hexa(unsigned char d)
 {
-	char hexa[3];
+	unsigned char hexa[3];
 
 	hexa[0] = '\\';
 	hexa[1] = "0123456789abcdef"[d / 16];
