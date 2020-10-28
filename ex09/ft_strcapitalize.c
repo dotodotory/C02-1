@@ -6,7 +6,7 @@
 /*   By: jiykim <jiykim@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 18:54:43 by jiykim            #+#    #+#             */
-/*   Updated: 2020/10/21 23:02:17 by jiykim           ###   ########.fr       */
+/*   Updated: 2020/10/28 19:06:31 by jiykim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@ char	*ft_strcapitalize(char *str)
 
 	i = 0;
 	if (str[i] >= 'a' && str[i] <= 'z')
-	{
 		str[i] -= 'a' - 'A';
-		i++;
-	}
-	while (str[i] != '\0')
+	while (str[i++])
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] += 'a' - 'A';
+	i = 0;
+	while (str[i])
 	{
 		if (!(str[i] >= 'a' && str[i] <= 'z'))
 			if (!(str[i] >= 'A' && str[i] <= 'Z'))
